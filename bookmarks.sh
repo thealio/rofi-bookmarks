@@ -41,7 +41,7 @@ if [[ ! -a "${BOOKMARKS_FILE}" ]]; then
     touch "${BOOKMARKS_FILE}"
 fi
 
-INPUT=$(cat $BOOKMARKS_FILE | rofi -dmenu -theme ${DIR}/${THEME}.rasi -p "")
+INPUT=$(cat $BOOKMARKS_FILE | rofi -dmenu -theme ${DIR}/${THEME}.rasi -p "#B#")
 
 if   [[ $INPUT == "+"* ]]; then
     INPUT=$(echo $INPUT | sed 's/+//') 
